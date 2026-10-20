@@ -5,7 +5,7 @@ import { Heading, Button, Badge } from "@/components/ui";
 import { BarberPole, Razor, Scissors, House } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Proposta — A Casa Barbearia",
+  title: { absolute: "Proposta — A Casa Barbearia" },
   robots: { index: false, follow: false },
 };
 

@@ -23,7 +23,7 @@
 
   /* Latão / ouro */
   --color-brass:       #B08D57; /* decorativo (não usar em texto) */
-  --color-brass-ink:   #8A6A33; /* latão texto-safe (~4.6:1 ✅ AA) */
+  --color-brass-ink:   #7A5C29; /* latão texto-safe (~5.5:1 ✅ AA — era 4.3:1) */
   --color-brass-light: #D4B483; /* decorativo claro */
 
   /* Madeira */
@@ -35,9 +35,9 @@
   --color-line-strong: #C9BA9E;
 
   /* Agenda */
-  --color-avail:       #3E7D5A;
+  --color-avail:       #2E6B4A;  /* reforçado: era 4.2:1, agora ~5.4:1 ✅ AA */
   --color-avail-bg:    #E4F0E8;
-  --color-busy:        #9A958B;
+  --color-busy:        #5C574F;  /* reforçado: era 2.4:1 (FAIL), agora ~5.1:1 ✅ AA */
   --color-busy-bg:     #ECE6DA;
   --color-selected:    #22352A;
   --color-selected-bg: #22352A;

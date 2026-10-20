@@ -5,7 +5,8 @@ import { Button } from "@/components/ui";
 import { HairSalonJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "A Casa – Barbearia | Coimbra",
+  // absolute evita que o template do root layout duplique o título
+  title: { absolute: "A Casa – Barbearia | Coimbra" },
   description:
     "Barbearia artesanal em Coimbra. Corte, barba e muito mais, com o cuidado de quem te recebe em casa.",
   alternates: { canonical: "/" },
@@ -34,7 +35,7 @@ export default function HomePage() {
 
         <div className="container-site relative z-10 flex flex-col items-start gap-6 max-w-2xl">
           <span className="divider-brass" />
-          <Heading as="h1" size={1} className="text-white !text-[var(--color-surface)]">
+          <Heading as="h1" size={1} className="text-[var(--color-surface)]">
             Entra.<br />
             Senta-te.<br />
             Estás em <em className="italic text-[var(--color-brass-light)]">Casa</em>.

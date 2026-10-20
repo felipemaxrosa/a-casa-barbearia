@@ -72,9 +72,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
+        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/60">
           <p>© {year} A Casa – Barbearia. Todos os direitos reservados.</p>
-          <Link href="/proposta" className="hover:text-white/70 transition-colors">
+          <Link href="/proposta" className="hover:text-white/80 transition-colors">
             Proposta
           </Link>
         </div>
