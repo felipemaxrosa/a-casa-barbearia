@@ -49,7 +49,11 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://cdn.sanity.io" />
       </head>
-      <body>{children}</body>
+      {/* suppressHydrationWarning: extensões de browser (ex: Dashlane, LastPass)
+          injectam atributos no <body> antes da hidratação do React, causando
+          um mismatch benigno. Esta flag suprime apenas o aviso no <body>,
+          não afecta os filhos nem oculta erros reais de hidratação. */}
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
