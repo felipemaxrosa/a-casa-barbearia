@@ -7,10 +7,10 @@ export function HairSalonJsonLd() {
   const data = {
     "@context": "https://schema.org",
     "@type": "HairSalon",
-    "@id": "https://acasa-barbearia.vercel.app/#hairsalon",
+    "@id": "https://a-casa-barbearia.vercel.app/#hairsalon",
     "name": "A Casa – Barbearia",
-    "image": "https://acasa-barbearia.vercel.app/images/logo.png",
-    "url": "https://acasa-barbearia.vercel.app",
+    "image": "https://a-casa-barbearia.vercel.app/images/logo.png",
+    "url": "https://a-casa-barbearia.vercel.app",
     "telephone": `+${process.env.NEXT_PUBLIC_WHATSAPP ?? "351910924545"}`,
     "priceRange": "€€",
     "address": {

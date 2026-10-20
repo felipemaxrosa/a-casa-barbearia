@@ -380,7 +380,7 @@ export default function PropostaPage() {
                 </strong>
                 , pago directamente ao registo de domínios — não passa por mim.
                 Sem domínio próprio, o site fica em{' '}
-                <em>acasa-barbearia.vercel.app</em>, que já funciona na
+                <em>a-casa-barbearia.vercel.app</em>, que já funciona na
                 perfeição.
               </p>
             </div>
