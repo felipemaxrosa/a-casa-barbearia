@@ -3,7 +3,6 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Desactivado para v1 — render estático + ISR mais simples
   cacheComponents: false,
-  partialPrefetching: true,
 
   // Turbopack (default no Next 16) + Tailwind v4
   turbopack: {
