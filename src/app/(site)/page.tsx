@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   // absolute evita que o template do root layout duplique o título
   title: { absolute: "A Casa – Barbearia | Coimbra" },
   description:
-    "Barbearia artesanal em Coimbra. Corte, barba e muito mais, com o cuidado de quem te recebe em casa.",
+    "Barbearia clássica em Coimbra. Corte, barba e muito mais, com o cuidado de quem te recebe em casa.",
   alternates: { canonical: "/" },
 };
 
@@ -42,7 +42,7 @@ export default function HomePage() {
             Estás em <em className="italic text-[var(--color-brass-light)]">Casa</em>.
           </Heading>
           <p className="text-lg text-white/70 leading-relaxed max-w-lg">
-            Barbearia artesanal no coração de Coimbra. Cortes de autor, barba impecável
+            Barbearia clássica no coração de Coimbra. Cortes de autor, barba impecável
             e o ambiente de quem te conhece pelo nome.
           </p>
           <div className="flex flex-wrap gap-4 mt-2">
@@ -70,7 +70,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
-              { icon: "✂️", title: "Ofício artesanal", desc: "Cada corte é tratado com atenção e rigor, sem pressa." },
+              { icon: "✂️", title: "Ofício clássico", desc: "Cada corte é tratado com atenção e rigor, sem pressa." },
               { icon: "☕", title: "Recebido em casa", desc: "Café, boa conversa e o André a receber-te pelo nome." },
               { icon: "📅", title: "Sem esperas", desc: "Marca online e chega na hora certa, sem filas." },
             ].map(({ icon, title, desc }) => (

@@ -21,7 +21,7 @@ export function Footer() {
               <span className="font-display font-semibold text-xl text-white">A Casa</span>
             </div>
             <p className="text-sm leading-relaxed text-white/60 max-w-xs">
-              Barbearia artesanal em Coimbra. Onde cada corte é uma experiência.
+              Barbearia clássica em Coimbra. Onde cada corte é uma experiência.
             </p>
           </div>
 

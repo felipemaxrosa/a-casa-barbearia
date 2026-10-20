@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     default: "A Casa – Barbearia | Coimbra",
   },
   description:
-    "Barbearia artesanal em Coimbra. Corte, barba e muito mais, com o cuidado de quem te recebe em casa.",
+    "Barbearia clássica em Coimbra. Corte, barba e muito mais, com o cuidado de quem te recebe em casa.",
   openGraph: {
     siteName: "A Casa – Barbearia",
     locale: "pt_PT",
