@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Heading, Badge, Button } from "@/components/ui";
-import { Scissors, Razor, Comb, House } from "@/components/icons";
+import { Scissors, Razor, Comb, House, Towel } from "@/components/icons";
 import { APPBARBER_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -37,7 +37,7 @@ const services = [
     desc: "O pacote completo — cabelo + barba com o cuidado que mereces.",
   },
   {
-    icon: <Scissors size={28} />,
+    icon: <Towel size={28} />,
     title: "Limpeza de Pele Express",
     price: "€10",
     duration: "20 min",
