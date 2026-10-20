@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes, AnchorHTMLAttributes } from "react";
 import Link from "next/link";
 
-type Variant = "primary" | "secondary" | "ghost";
+type Variant = "primary" | "secondary" | "ghost" | "brass";
 type Size = "sm" | "md" | "lg";
 
 interface ButtonBaseProps {
@@ -21,6 +21,9 @@ const variantStyles: Record<Variant, string> = {
     "border border-[var(--color-green-900)] text-[var(--color-green-900)] hover:bg-[var(--color-green-100)]",
   ghost:
     "text-[var(--color-brass-ink)] hover:text-[var(--color-green-900)] underline underline-offset-4",
+  // Para usar sobre fundos verde-escuro (hero, secções CTA)
+  brass:
+    "bg-[var(--color-brass)] text-[var(--color-green-900)] hover:bg-[var(--color-brass-light)] shadow-sm font-semibold",
 };
 
 const sizeStyles: Record<Size, string> = {

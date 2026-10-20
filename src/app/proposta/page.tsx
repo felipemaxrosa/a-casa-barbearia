@@ -36,12 +36,7 @@ export default function PropostaPage() {
             Hoje a tua barbearia vive no boca-a-boca e no Instagram. Isso já foi suficiente —
             mas há clientes que te procuram no Google e não te encontram. Um site muda isso.
           </p>
-          <Button
-            href="/"
-            variant="secondary"
-            size="lg"
-            className="border-white/40 text-white hover:bg-white/10"
-          >
+          <Button href="/" variant="brass" size="lg">
             Ver o site demo →
           </Button>
         </div>
@@ -176,7 +171,7 @@ export default function PropostaPage() {
             é assim que os teus clientes vão ver A Casa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/" size="lg">
+            <Button href="/" variant="brass" size="lg">
               Ver o site demo
             </Button>
             <Button

@@ -16,9 +16,12 @@ const sizeClass: Record<Level, string> = {
 };
 
 export function Heading({ as: Tag = "h2", size = 2, accent = false, className = "", children, ...props }: Props) {
+  // Não definimos color aqui — herda de @layer base (h1,h2,...{color:var(--color-ink)})
+  // Para que className="text-white" ou qualquer utilitário de cor passado pelo pai
+  // ganhe sempre (Tailwind utilities > @layer base).
   return (
     <Tag
-      className={`font-display text-[var(--color-ink)] ${sizeClass[size]} ${accent ? "text-[var(--color-green-700)]" : ""} ${className}`}
+      className={`font-display ${sizeClass[size]} ${accent ? "text-[var(--color-green-700)]" : ""} ${className}`}
       {...props}
     >
       {children}

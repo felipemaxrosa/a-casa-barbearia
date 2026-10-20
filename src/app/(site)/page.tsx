@@ -45,7 +45,10 @@ export default function HomePage() {
             e o ambiente de quem te conhece pelo nome.
           </p>
           <div className="flex flex-wrap gap-4 mt-2">
-            <Button href="/agenda" size="lg">
+            {/* Hero tem fundo verde-900 — botão primário seria invisível.
+                Usamos variante brass (latão) para o CTA principal e
+                outline branco para o secundário. */}
+            <Button href="/agenda" variant="brass" size="lg">
               Marcar corte
             </Button>
             <Button href="/servicos" variant="secondary" size="lg" className="border-white/40 text-white hover:bg-white/10">
@@ -125,7 +128,7 @@ export default function HomePage() {
           <p className="text-white/70 mb-8 text-lg">
             Escolhe o horário que te convém e aparece sem esperas.
           </p>
-          <Button href="/agenda" size="lg">
+          <Button href="/agenda" variant="brass" size="lg">
             Marcar agora
           </Button>
         </div>

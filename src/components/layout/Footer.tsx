@@ -28,7 +28,7 @@ export function Footer() {
 
           {/* Navegação */}
           <div>
-            <h3 className="font-sans text-xs uppercase tracking-widest text-[var(--color-brass)] mb-4">
+            <h3 className="font-sans text-xs uppercase tracking-widest text-[var(--color-brass-light)] mb-4">
               Navegação
             </h3>
             <ul className="flex flex-col gap-2">
@@ -47,7 +47,7 @@ export function Footer() {
 
           {/* Contacto */}
           <div>
-            <h3 className="font-sans text-xs uppercase tracking-widest text-[var(--color-brass)] mb-4">
+            <h3 className="font-sans text-xs uppercase tracking-widest text-[var(--color-brass-light)] mb-4">
               Encontra-nos
             </h3>
             <address className="not-italic text-sm text-white/70 leading-relaxed">

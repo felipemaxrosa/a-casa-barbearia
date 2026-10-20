@@ -18,7 +18,7 @@ const team = [
     placeholder: true,
   },
   {
-    name: "Colega",
+    name: "Costa",
     role: "Barbeiro",
     bio: "Profissional dedicado, com técnica apurada e atenção ao detalhe. Parte essencial da equipa d'A Casa.",
     specialties: ["Corte moderno", "Barba", "Combo"],

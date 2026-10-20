@@ -74,32 +74,40 @@ body {
   font-size: 1rem;
 }
 
-/* ── Tipografia base ──────────────────────────────────────── */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display), Georgia, serif;
-  line-height: 1.15;
-  font-weight: 600;
-  color: var(--color-ink);
-}
+/*
+ * IMPORTANTE: estas regras vivem dentro de @layer base
+ * para que os utilitários Tailwind (@layer utilities) as possam
+ * sobrepor com prioridade normal — sem @layer, um selector de
+ * elemento simples ganha sempre a qualquer classe utilitária.
+ */
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
-/* Escala modular ~1.22 */
-h1 { font-size: clamp(2rem,    5vw,  3.5rem); }
-h2 { font-size: clamp(1.6rem,  3.5vw, 2.5rem); }
-h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
-h4 { font-size: 1.25rem; }
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--color-brass-ink);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
 
-p { max-width: 68ch; }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display), Georgia, serif;
+    line-height: 1.15;
+    font-weight: 600;
+    /* NÃO definir color aqui — headings herdam do body (--color-ink)
+       Assim, text-white / text-[...] num pai ou no próprio heading
+       ganha sempre, pois inheritance < @layer base < @layer utilities */
+  }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+  h1 { font-size: clamp(2rem,    5vw,  3.5rem); }
+  h2 { font-size: clamp(1.6rem,  3.5vw, 2.5rem); }
+  h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
+  h4 { font-size: 1.25rem; }
 
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--color-brass-ink);
-  outline-offset: 3px;
-  border-radius: 4px;
+  p { max-width: 68ch; }
 }
 
 /* ── Skip-link acessibilidade ─────────────────────────────── */
