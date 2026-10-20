@@ -1,28 +1,29 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import { Heading, Badge, Button } from "@/components/ui";
-import { Scissors } from "@/components/icons";
-import { APPBARBER_URL } from "@/lib/constants";
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import { Heading, Badge, Button } from '@/components/ui';
+import { Scissors } from '@/components/icons';
+import { APPBARBER_URL } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: "A Nossa Equipa",
-  description: "Conhece os profissionais da A Casa Barbearia em Coimbra. André e a equipa ao teu serviço.",
-  alternates: { canonical: "/equipa" },
+  title: 'A Nossa Equipa',
+  description:
+    'Conhece os profissionais da A Casa Barbearia em Coimbra. André e a equipa ao teu serviço.',
+  alternates: { canonical: '/equipa' },
 };
 
 const team = [
   {
-    name: "André",
-    role: "Proprietário · Barbeiro",
-    bio: "André fundou A Casa com uma missão simples: criar um espaço onde cada cliente se sente em casa. Com anos de experiência e paixão pelo ofício, cada corte é uma expressão do seu cuidado.",
-    specialties: ["Corte clássico", "Barba", "Fade", "Limpeza de pele"],
+    name: 'André',
+    role: 'Barbeiro',
+    bio: 'André fundou A Casa com uma missão simples: criar um espaço onde cada cliente se sinta em casa. Com anos de experiência e paixão pelo ofício, cada corte é uma expressão do seu cuidado.',
+    specialties: ['Corte clássico', 'Barba', 'Limpeza de pele'],
     placeholder: true,
   },
   {
-    name: "Costa",
-    role: "Barbeiro",
+    name: 'Costa',
+    role: 'Barbeiro',
     bio: "Profissional dedicado, com técnica apurada e atenção ao detalhe. Parte essencial da equipa d'A Casa.",
-    specialties: ["Corte moderno", "Barba", "Combo"],
+    specialties: ['Corte moderno', 'Barba', 'Combo'],
     placeholder: true,
   },
 ];
@@ -33,9 +34,12 @@ export default function EquipaPage() {
       <div className="container-site">
         <div className="mb-12">
           <span className="divider-brass" />
-          <Heading as="h1" size={1}>A Nossa Equipa</Heading>
+          <Heading as="h1" size={1}>
+            A Nossa Equipa
+          </Heading>
           <p className="text-[var(--color-muted)] mt-4 text-lg max-w-xl">
-            Mais do que barbeiros — são os anfitriões d'A Casa. Conhece quem vai cuidar de ti.
+            Mais do que barbeiros — são os anfitriões d'A Casa. Conhece quem vai
+            cuidar de ti.
           </p>
         </div>
 
@@ -44,29 +48,45 @@ export default function EquipaPage() {
             <div
               key={name}
               className="bg-[var(--color-surface)] rounded-[var(--radius-card)] overflow-hidden"
-              style={{ boxShadow: "var(--shadow-card)" }}
+              style={{ boxShadow: 'var(--shadow-card)' }}
             >
               {/* Foto placeholder */}
               <div className="aspect-[4/3] bg-[var(--color-surface-2)] flex items-center justify-center relative">
                 {placeholder ? (
                   <div className="flex flex-col items-center gap-3 text-[var(--color-muted)]">
-                    <Scissors size={48} className="text-[var(--color-line-strong)]" />
+                    <Scissors
+                      size={48}
+                      className="text-[var(--color-line-strong)]"
+                    />
                     <span className="text-sm">Foto em breve</span>
                   </div>
                 ) : (
-                  <Image src={`/images/team/${name.toLowerCase()}.jpg`} alt={`${name} — ${role}`} fill className="object-cover" />
+                  <Image
+                    src={`/images/team/${name.toLowerCase()}.jpg`}
+                    alt={`${name} — ${role}`}
+                    fill
+                    className="object-cover"
+                  />
                 )}
               </div>
 
               {/* Info */}
               <div className="p-6">
-                <h2 className="font-display font-semibold text-2xl mb-1">{name}</h2>
-                <p className="text-[var(--color-brass-ink)] text-sm font-medium mb-4">{role}</p>
-                <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-5">{bio}</p>
+                <h2 className="font-display font-semibold text-2xl mb-1">
+                  {name}
+                </h2>
+                <p className="text-[var(--color-brass-ink)] text-sm font-medium mb-4">
+                  {role}
+                </p>
+                <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-5">
+                  {bio}
+                </p>
 
                 <div className="flex flex-wrap gap-2">
                   {specialties.map((s) => (
-                    <Badge key={s} variant="green">{s}</Badge>
+                    <Badge key={s} variant="green">
+                      {s}
+                    </Badge>
                   ))}
                 </div>
               </div>
@@ -76,9 +96,17 @@ export default function EquipaPage() {
 
         <div className="mt-12 p-6 bg-[var(--color-surface-2)] rounded-[var(--radius-card)] max-w-lg">
           <p className="text-[var(--color-muted)] text-sm leading-relaxed">
-            Preferes um barbeiro específico? Na marcação podes escolher com quem queres.
+            Preferes um barbeiro específico? Na marcação podes escolher com quem
+            queres.
           </p>
-          <Button href={APPBARBER_URL} variant="secondary" size="sm" className="mt-4" target="_blank" rel="noopener noreferrer">
+          <Button
+            href={APPBARBER_URL}
+            variant="secondary"
+            size="sm"
+            className="mt-4"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Marcar corte
           </Button>
         </div>

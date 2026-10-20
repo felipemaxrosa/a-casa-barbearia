@@ -15,10 +15,10 @@ export function HairSalonJsonLd() {
     "priceRange": "€€",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Coimbra",   // actualizar com morada real
+      "streetAddress": "Rua Feitoria dos Linhos, Nº 6",
       "addressLocality": "Coimbra",
       "addressRegion": "Centro",
-      "postalCode": "3000",          // actualizar
+      "postalCode": "3040-252",
       "addressCountry": "PT",
     },
     "geo": {

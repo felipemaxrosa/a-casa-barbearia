@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Heading, Button } from "@/components/ui";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contactos e Localização",
-  description: "Encontra a A Casa Barbearia em Coimbra. Morada, horário de funcionamento e contactos.",
+  description: "Encontra a A Casa Barbearia em Coimbra. Rua Feitoria dos Linhos, Nº6, junto ao Portugal dos Pequenitos.",
   alternates: { canonical: "/contactos" },
 };
 
@@ -36,8 +37,9 @@ export default function ContactosPage() {
             <div>
               <h2 className="font-display font-semibold text-xl mb-3">Morada</h2>
               <address className="not-italic text-[var(--color-muted)] leading-relaxed">
-                <p>Coimbra, Portugal</p>
-                <p className="text-sm mt-1 text-[var(--color-muted)]/70">(morada exacta em breve)</p>
+                <p className="font-medium text-[var(--color-ink)]">Rua Feitoria dos Linhos, Nº 6</p>
+                <p>3040-252 Coimbra</p>
+                <p className="text-sm mt-1 text-[var(--color-muted)]/80">Junto ao Portugal dos Pequenitos</p>
               </address>
               <a
                 href="https://maps.app.goo.gl/66xdMgbatHhrtvRx9"
@@ -69,7 +71,7 @@ export default function ContactosPage() {
               <h2 className="font-display font-semibold text-xl mb-3">Contacto</h2>
               <div className="flex flex-col gap-3">
                 <Button
-                  href="https://wa.me/351XXXXXXXXX"
+                  href={WHATSAPP_URL}
                   variant="primary"
                   size="md"
                   className="w-fit"
