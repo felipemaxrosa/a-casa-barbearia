@@ -33,7 +33,7 @@ export function Header() {
               priority
             />
             <span className="font-display font-semibold text-lg text-[var(--color-green-900)] hidden sm:block">
-              A Casa
+              A Casa Barbearia
             </span>
           </Link>
 
