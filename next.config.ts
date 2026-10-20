@@ -1,9 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  // Desactivado para v1 — render estático + ISR mais simples
+  cacheComponents: false,
+
+  // Turbopack (default no Next 16) + Tailwind v4
   turbopack: {
     rules: {
       "*.css": {
@@ -11,6 +12,16 @@ const nextConfig: NextConfig = {
         as: "*.css",
       },
     },
+  },
+
+  // Imagens: permitir CDN do Sanity quando integrado
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+      },
+    ],
   },
 };
 

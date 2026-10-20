@@ -1,26 +1,159 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ────────────────────────────────────────────────────────────
+   A Casa — Design System Tokens
+   Paleta calibrada à logo verde-escuro da barbearia.
+   Contraste WCAG AA verificado (AA = 4.5:1 texto normal).
+   ──────────────────────────────────────────────────────────── */
+@theme {
+  /* Superfícies */
+  --color-cream:       #F5EEE1; /* fundo principal (quente) */
+  --color-surface:     #FBF6EC; /* cartões / elevação suave */
+  --color-surface-2:   #EFE6D2; /* secções alternadas */
+
+  /* Texto */
+  --color-ink:         #1F2A24; /* corpo (~12:1 sobre cream ✅ AAA) */
+  --color-muted:       #5A6157; /* texto secundário (~5:1 ✅ AA) */
+
+  /* Verde (logo) */
+  --color-green-900:   #1E3426; /* botão primário / fundo escuro */
+  --color-green-800:   #22352A; /* hover do primário */
+  --color-green-700:   #2D4A38; /* destaque em títulos */
+  --color-green-100:   #E4EDE7; /* fundo suave verde */
+
+  /* Latão / ouro */
+  --color-brass:       #B08D57; /* decorativo (não usar em texto) */
+  --color-brass-ink:   #7A5C29; /* latão texto-safe (~5.5:1 ✅ AA — era 4.3:1) */
+  --color-brass-light: #D4B483; /* decorativo claro */
+
+  /* Madeira */
+  --color-wood:        #8B5E3C; /* ilustrações / accents */
+  --color-wood-ink:    #6E4A2F; /* madeira texto-safe */
+
+  /* Linhas / bordas */
+  --color-line:        #E3D9C6;
+  --color-line-strong: #C9BA9E;
+
+  /* Agenda */
+  --color-avail:       #2E6B4A;  /* reforçado: era 4.2:1, agora ~5.4:1 ✅ AA */
+  --color-avail-bg:    #E4F0E8;
+  --color-busy:        #5C574F;  /* reforçado: era 2.4:1 (FAIL), agora ~5.1:1 ✅ AA */
+  --color-busy-bg:     #ECE6DA;
+  --color-selected:    #22352A;
+  --color-selected-bg: #22352A;
+
+  /* Fontes (wired via next/font no layout.tsx) */
+  --font-display: var(--font-fraunces);
+  --font-sans:    var(--font-inter);
+
+  /* Raio */
+  --radius-card: 0.75rem;
+  --radius-pill: 9999px;
+
+  /* Sombra quente */
+  --shadow-card: 0 2px 12px rgba(40, 30, 15, 0.07);
+  --shadow-lg:   0 8px 32px rgba(40, 30, 15, 0.12);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ── Reset e base ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/*
+ * IMPORTANTE: estas regras vivem dentro de @layer base
+ * para que os utilitários Tailwind (@layer utilities) as possam
+ * sobrepor com prioridade normal — sem @layer, um selector de
+ * elemento simples ganha sempre a qualquer classe utilitária.
+ */
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--color-brass-ink);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display), Georgia, serif;
+    line-height: 1.15;
+    font-weight: 600;
+    /* NÃO definir color aqui — headings herdam do body (--color-ink)
+       Assim, text-white / text-[...] num pai ou no próprio heading
+       ganha sempre, pois inheritance < @layer base < @layer utilities */
+  }
+
+  h1 { font-size: clamp(2rem,    5vw,  3.5rem); }
+  h2 { font-size: clamp(1.6rem,  3.5vw, 2.5rem); }
+  h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
+  h4 { font-size: 1.25rem; }
+
+  p { max-width: 68ch; }
+}
+
+/* ── Skip-link acessibilidade ─────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--color-green-900);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  z-index: 9999;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* ── Utilitário: container ────────────────────────────────── */
+.container-site {
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 640px) {
+  .container-site { padding-inline: 1.5rem; }
+}
+@media (min-width: 1024px) {
+  .container-site { padding-inline: 2rem; }
+}
+
+/* ── Secção padrão ────────────────────────────────────────── */
+.section {
+  padding-block: 5rem;
+}
+@media (min-width: 768px) {
+  .section { padding-block: 7rem; }
+}
+
+/* ── Linha decorativa latão ───────────────────────────────── */
+.divider-brass {
+  width: 3rem;
+  height: 2px;
+  background: var(--color-brass);
+  display: block;
+  margin-block: 1rem;
 }
