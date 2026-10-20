@@ -118,11 +118,8 @@ export default function ServicosPage() {
           ))}
         </div>
 
-        <div className="mt-10 flex flex-col sm:flex-row gap-4 items-start">
-          <p className="text-sm text-[var(--color-muted)]">
-            Preços disponíveis via AppBarber. Marcações confirmadas no momento.
-          </p>
-          <Button href={APPBARBER_URL} variant="secondary" size="sm" className="shrink-0" target="_blank" rel="noopener noreferrer">
+        <div className="mt-10">
+          <Button href={APPBARBER_URL} variant="secondary" size="sm" target="_blank" rel="noopener noreferrer">
             Marcar corte →
           </Button>
         </div>
