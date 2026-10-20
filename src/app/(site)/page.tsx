@@ -30,15 +30,16 @@ export default function HomePage() {
         className="section bg-[var(--color-green-900)] text-white relative overflow-hidden"
         aria-labelledby="hero-heading"
       >
-        {/* Ilustração decorativa — ferramentas do barbeiro */}
-        <div className="absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none select-none hidden md:block">
+        {/* Ilustração decorativa — ferramentas do barbeiro (desktop: metade direita; mobile: canto direito mais suave) */}
+        <div className="absolute right-0 top-0 bottom-0 w-2/3 md:w-1/2 pointer-events-none select-none">
           <Image
             src="/images/barber-tools.png"
             alt=""
             fill
             className="object-contain object-center"
-            style={{ mixBlendMode: "luminosity", opacity: 0.12 }}
+            style={{ mixBlendMode: "luminosity", opacity: 0.08 }}
             priority={false}
+            sizes="(max-width: 768px) 66vw, 50vw"
           />
         </div>
 
