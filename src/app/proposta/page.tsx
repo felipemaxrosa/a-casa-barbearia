@@ -88,14 +88,47 @@ export default function PropostaPage() {
         </div>
       </section>
 
-      {/* ── Depoimentos ─────────────────────────────────────── */}
+      {/* ── O que NÃO é ─────────────────────────────────────── */}
       <section className="section bg-[var(--color-surface-2)]">
+        <div className="container-site max-w-3xl">
+          <span className="divider-brass" />
+          <Heading as="h2" size={2} className="mb-4">
+            Uma coisa importante de perceber
+          </Heading>
+          <p className="text-[var(--color-muted)] mb-6 leading-relaxed max-w-none">
+            Este é um <strong className="text-[var(--color-ink)]">site de montra</strong> — uma presença online profissional
+            que coloca a A Casa no Google e dá confiança a quem te encontra.
+            Não é um painel de gestão de marcações, stock ou contabilidade.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="bg-[var(--color-surface)] rounded-[var(--radius-card)] p-5 border-l-4 border-[var(--color-avail)]" style={{ boxShadow: "var(--shadow-card)" }}>
+              <h3 className="font-display font-semibold text-base mb-3 text-[var(--color-green-700)]">✓ O que o site faz</h3>
+              <ul className="text-sm text-[var(--color-muted)] flex flex-col gap-2">
+                {["Apareces no Google quando alguém procura barbeiro em Coimbra", "Mostras os teus serviços e preços", "Os clientes contactam-te por WhatsApp ou marcam pelo AppBarber", "Tens uma galeria com o teu trabalho", "Transmites profissionalismo e confiança"].map(item => (
+                  <li key={item} className="flex gap-2"><span className="text-[var(--color-avail)] shrink-0">✓</span>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-[var(--color-surface)] rounded-[var(--radius-card)] p-5 border-l-4 border-[var(--color-line-strong)]" style={{ boxShadow: "var(--shadow-card)" }}>
+              <h3 className="font-display font-semibold text-base mb-3 text-[var(--color-muted)]">○ O que não inclui</h3>
+              <ul className="text-sm text-[var(--color-muted)] flex flex-col gap-2">
+                {["Painel para gerir marcações (isso é o AppBarber)", "Loja online ou pagamentos", "Sistema de gestão de clientes", "App para telemóvel"].map(item => (
+                  <li key={item} className="flex gap-2"><span className="text-[var(--color-muted)]/40 shrink-0">○</span>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Depoimentos ─────────────────────────────────────── */}
+      <section className="section">
         <div className="container-site max-w-3xl">
           <span className="divider-brass" />
           <Heading as="h2" size={2} className="mb-4">
             Os teus clientes já falam de ti assim
           </Heading>
-          <p className="text-[var(--color-muted)] mb-8">
+          <p className="text-[var(--color-muted)] mb-8 max-w-none">
             Imagina um visitante online ler isto antes de marcar. A confiança já está ganha antes de ele entrar.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -111,7 +144,7 @@ export default function PropostaPage() {
       </section>
 
       {/* ── SEO local ───────────────────────────────────────── */}
-      <section className="section">
+      <section className="section bg-[var(--color-surface-2)]">
         <div className="container-site max-w-3xl">
           <span className="divider-brass" />
           <Heading as="h2" size={2} className="mb-4">
@@ -131,6 +164,90 @@ export default function PropostaPage() {
               <li>Open Graph: quando partilhas o link, aparece uma pré-visualização com a tua identidade</li>
               <li>Página rápida: sites lentos sobem menos — o teu vai ser rápido</li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Preços ──────────────────────────────────────────── */}
+      <section className="section">
+        <div className="container-site max-w-3xl">
+          <span className="divider-brass" />
+          <Heading as="h2" size={2} className="mb-3">
+            Investimento
+          </Heading>
+          <p className="text-[var(--color-muted)] mb-10 max-w-none">
+            Dois caminhos simples — escolhes o que faz mais sentido para ti.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+            {/* Opção A */}
+            <div className="bg-[var(--color-surface)] rounded-[var(--radius-card)] p-7 flex flex-col gap-4 border border-[var(--color-line)]" style={{ boxShadow: "var(--shadow-card)" }}>
+              <div>
+                <Badge variant="green" className="mb-3">Opção A</Badge>
+                <div className="flex items-end gap-1 mb-1">
+                  <span className="font-display font-bold text-4xl text-[var(--color-green-700)]">€300</span>
+                  <span className="text-[var(--color-muted)] text-sm mb-1">pagamento único</span>
+                </div>
+                <p className="text-sm text-[var(--color-muted)]">+ €30/mês manutenção</p>
+              </div>
+              <ul className="text-sm text-[var(--color-muted)] flex flex-col gap-2 flex-1">
+                {[
+                  "Site completo e publicado online",
+                  "Fotos e dados inseridos por mim",
+                  "Actualizações mensais incluídas",
+                  "Suporte contínuo por WhatsApp",
+                  "Sem surpresas — cancelas quando quiseres",
+                ].map(item => (
+                  <li key={item} className="flex gap-2"><span className="text-[var(--color-avail)] shrink-0 mt-0.5">✓</span>{item}</li>
+                ))}
+              </ul>
+              <p className="text-xs text-[var(--color-muted)] pt-2 border-t border-[var(--color-line)]">
+                Ideal se quiseres que eu continue a tratar do site ao longo do tempo.
+              </p>
+            </div>
+
+            {/* Opção B */}
+            <div className="bg-[var(--color-green-900)] rounded-[var(--radius-card)] p-7 flex flex-col gap-4 relative overflow-hidden" style={{ boxShadow: "var(--shadow-lg)" }}>
+              <div className="absolute top-4 right-4">
+                <Badge variant="brass" className="bg-[var(--color-brass)] text-[var(--color-green-900)] text-xs font-bold px-2 py-0.5 rounded-full">Completo</Badge>
+              </div>
+              <div>
+                <div className="text-xs font-medium text-white/50 uppercase tracking-widest mb-3">Opção B</div>
+                <div className="flex items-end gap-1 mb-1">
+                  <span className="font-display font-bold text-4xl text-[var(--color-brass-light)]">€400</span>
+                  <span className="text-white/60 text-sm mb-1">pagamento único</span>
+                </div>
+                <p className="text-sm text-white/50">sem mensalidade</p>
+              </div>
+              <ul className="text-sm text-white/70 flex flex-col gap-2 flex-1">
+                {[
+                  "Site completo e publicado online",
+                  "Fotos e dados inseridos por mim",
+                  "O site fica teu — para sempre",
+                  "Sem mensalidades nem compromissos",
+                  "Suporte inicial de 30 dias incluído",
+                ].map(item => (
+                  <li key={item} className="flex gap-2"><span className="text-[var(--color-brass-light)] shrink-0 mt-0.5">✓</span>{item}</li>
+                ))}
+              </ul>
+              <p className="text-xs text-white/40 pt-2 border-t border-white/10">
+                Pagas uma vez, o site é teu. Futuras actualizações à parte, se precisares.
+              </p>
+            </div>
+          </div>
+
+          {/* Nota domínio */}
+          <div className="bg-[var(--color-surface-2)] rounded-[var(--radius-card)] p-5 flex gap-3">
+            <span className="text-[var(--color-brass-ink)] text-lg shrink-0">🌐</span>
+            <div>
+              <p className="text-sm font-medium text-[var(--color-ink)] mb-1">Domínio personalizado (opcional)</p>
+              <p className="text-sm text-[var(--color-muted)] leading-relaxed max-w-none">
+                Um endereço como <strong className="text-[var(--color-ink)]">acasabarbearia.pt</strong> dá mais credibilidade
+                e é mais fácil de partilhar. Custa entre <strong className="text-[var(--color-ink)]">€15 a €25 por ano</strong>,
+                pago directamente ao registo de domínios — não passa por mim.
+                Sem domínio próprio, o site fica em <em>acasa-barbearia.vercel.app</em>, que já funciona na perfeição.
+              </p>
+            </div>
           </div>
         </div>
       </section>
