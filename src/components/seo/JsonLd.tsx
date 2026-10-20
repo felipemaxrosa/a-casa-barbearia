@@ -11,7 +11,7 @@ export function HairSalonJsonLd() {
     "name": "A Casa – Barbearia",
     "image": "https://acasa-barbearia.vercel.app/images/logo.png",
     "url": "https://acasa-barbearia.vercel.app",
-    "telephone": "+351XXXXXXXXX",
+    "telephone": `+${process.env.NEXT_PUBLIC_WHATSAPP ?? "351910924545"}`,
     "priceRange": "€€",
     "address": {
       "@type": "PostalAddress",
