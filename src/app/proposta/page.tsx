@@ -203,8 +203,8 @@ const features = [
   },
   {
     icon: <Scissors size={20} />,
-    title: "Agenda de marcações online",
-    desc: "Os clientes vêem os horários disponíveis e marcam por WhatsApp — sem esperas, sem telefonemas desnecessários.",
+    title: "Marcações online via AppBarber",
+    desc: "Os clientes marcam directamente no AppBarber — vêem horários disponíveis por barbeiro, sem esperas nem telefonemas.",
     badge: "Sem esperas",
   },
   {

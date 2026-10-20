@@ -4,12 +4,11 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui";
-import { House } from "@/components/icons";
+import { APPBARBER_URL } from "@/lib/constants";
 
 const navLinks = [
   { href: "/servicos",  label: "Serviços" },
   { href: "/equipa",    label: "Equipa" },
-  { href: "/agenda",    label: "Agenda" },
   { href: "/contactos", label: "Contactos" },
 ];
 
@@ -53,7 +52,12 @@ export function Header() {
 
           {/* CTA desktop */}
           <div className="hidden md:block">
-            <Button href="/agenda" size="sm">
+            <Button
+              href={APPBARBER_URL}
+              size="sm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Marcar corte
             </Button>
           </div>
@@ -87,7 +91,13 @@ export function Header() {
                 {label}
               </Link>
             ))}
-            <Button href="/agenda" size="md" className="mt-2 w-full justify-center">
+            <Button
+              href={APPBARBER_URL}
+              size="md"
+              className="mt-2 w-full justify-center"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Marcar corte
             </Button>
           </nav>

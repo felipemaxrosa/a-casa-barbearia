@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Heading } from "@/components/ui";
 import { Button } from "@/components/ui";
 import { HairSalonJsonLd } from "@/components/seo/JsonLd";
+import { APPBARBER_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   // absolute evita que o template do root layout duplique o título
@@ -48,7 +49,7 @@ export default function HomePage() {
             {/* Hero tem fundo verde-900 — botão primário seria invisível.
                 Usamos variante brass (latão) para o CTA principal e
                 outline branco para o secundário. */}
-            <Button href="/agenda" variant="brass" size="lg">
+            <Button href={APPBARBER_URL} variant="brass" size="lg" target="_blank" rel="noopener noreferrer">
               Marcar corte
             </Button>
             <Button href="/servicos" variant="secondary" size="lg" className="border-white/40 text-white hover:bg-white/10">
@@ -128,7 +129,7 @@ export default function HomePage() {
           <p className="text-white/70 mb-8 text-lg">
             Escolhe o horário que te convém e aparece sem esperas.
           </p>
-          <Button href="/agenda" variant="brass" size="lg">
+          <Button href={APPBARBER_URL} variant="brass" size="lg" target="_blank" rel="noopener noreferrer">
             Marcar agora
           </Button>
         </div>

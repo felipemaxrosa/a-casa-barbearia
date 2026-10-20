@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Heading, Badge, Button } from "@/components/ui";
 import { Scissors } from "@/components/icons";
+import { APPBARBER_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "A Nossa Equipa",
@@ -75,10 +76,10 @@ export default function EquipaPage() {
 
         <div className="mt-12 p-6 bg-[var(--color-surface-2)] rounded-[var(--radius-card)] max-w-lg">
           <p className="text-[var(--color-muted)] text-sm leading-relaxed">
-            Preferes um barbeiro específico? Na agenda podes escolher com quem queres marcar.
+            Preferes um barbeiro específico? Na marcação podes escolher com quem queres.
           </p>
-          <Button href="/agenda" variant="secondary" size="sm" className="mt-4">
-            Ver agenda
+          <Button href={APPBARBER_URL} variant="secondary" size="sm" className="mt-4" target="_blank" rel="noopener noreferrer">
+            Marcar corte
           </Button>
         </div>
       </div>

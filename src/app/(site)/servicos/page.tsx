@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Heading, Badge, Button } from "@/components/ui";
 import { Scissors, Razor, Comb, House } from "@/components/icons";
+import { APPBARBER_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Serviços e Preços",
@@ -121,8 +122,8 @@ export default function ServicosPage() {
           <p className="text-sm text-[var(--color-muted)]">
             Preços disponíveis via AppBarber. Marcações confirmadas no momento.
           </p>
-          <Button href="/agenda" variant="secondary" size="sm" className="shrink-0">
-            Ver disponibilidade →
+          <Button href={APPBARBER_URL} variant="secondary" size="sm" className="shrink-0" target="_blank" rel="noopener noreferrer">
+            Marcar corte →
           </Button>
         </div>
       </div>
