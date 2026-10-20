@@ -27,11 +27,16 @@ export const metadata: Metadata = {
     "Barbearia clássica em Coimbra. Corte, barba e muito mais, com o cuidado de quem te recebe em casa.",
   openGraph: {
     siteName: "A Casa – Barbearia",
+    title: "A Casa – Barbearia | Coimbra",
+    description: "Barbearia clássica em Coimbra. Corte, barba e muito mais, com o cuidado de quem te recebe em casa.",
     locale: "pt_PT",
     type: "website",
+    url: "https://a-casa-barbearia.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
+    title: "A Casa – Barbearia | Coimbra",
+    description: "Barbearia clássica em Coimbra. Corte, barba e muito mais, com o cuidado de quem te recebe em casa.",
   },
   robots: {
     index: true,
@@ -46,10 +51,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-PT" className={`${fraunces.variable} ${inter.variable}`}>
-      <head>
-        <link rel="preconnect" href="https://cdn.sanity.io" />
-      </head>
-      {/* suppressHydrationWarning: extensões de browser (ex: Dashlane, LastPass)
+{/* suppressHydrationWarning: extensões de browser (ex: Dashlane, LastPass)
           injectam atributos no <body> antes da hidratação do React, causando
           um mismatch benigno. Esta flag suprime apenas o aviso no <body>,
           não afecta os filhos nem oculta erros reais de hidratação. */}
