@@ -26,7 +26,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="A Casa Barbearia — Início">
             <Image
-              src="/images/logo.svg"
+              src="/images/logo.png"
               alt="A Casa Barbearia"
               width={48}
               height={48}
