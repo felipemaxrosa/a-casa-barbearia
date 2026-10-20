@@ -174,7 +174,7 @@ const features = [
   {
     icon: <House size={20} />,
     title: "Site completo e profissional",
-    desc: "Home, serviços, equipa e contactos. Uma montra digital que representa A Casa com a qualidade que o teu trabalho merece.",
+    desc: "Home, serviços, galeria, equipa e contactos. Uma montra digital que representa A Casa com a qualidade que o teu trabalho merece.",
     badge: undefined,
   },
   {

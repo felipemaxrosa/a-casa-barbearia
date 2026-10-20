@@ -8,6 +8,7 @@ import { APPBARBER_URL } from "@/lib/constants";
 
 const navLinks = [
   { href: "/servicos",  label: "Serviços" },
+  { href: "/galeria",   label: "Galeria" },
   { href: "/equipa",    label: "Equipa" },
   { href: "/contactos", label: "Contactos" },
 ];
