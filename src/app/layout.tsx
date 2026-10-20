@@ -17,7 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://acasa-barbearia.vercel.app"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://a-casa-barbearia.vercel.app"
   ),
   title: {
     template: "%s · A Casa – Barbearia",
