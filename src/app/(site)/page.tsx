@@ -71,7 +71,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               { icon: "✂️", title: "Ofício clássico", desc: "Cada corte é tratado com atenção e rigor, sem pressa." },
-              { icon: "☕", title: "Recebido em casa", desc: "Café, boa conversa e o André a receber-te pelo nome." },
+              { icon: "☕", title: "Recebido em casa", desc: "Café, boa conversa e uma equipa que te recebe pelo nome." },
               { icon: "📅", title: "Sem esperas", desc: "Marca online e chega na hora certa, sem filas." },
             ].map(({ icon, title, desc }) => (
               <div
