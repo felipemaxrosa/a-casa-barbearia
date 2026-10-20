@@ -16,9 +16,9 @@ interface Photo {
 }
 
 const photos: Photo[] = [
-  { src: "/images/gallery/01.jpg", alt: "Corte clássico com fade — A Casa Barbearia", real: true },
-  { src: "/images/gallery/02.jpg", alt: "Corte e barba degradada — A Casa Barbearia",  real: true },
-  { src: "/images/gallery/03.jpg", alt: "Fade alto com textura — A Casa Barbearia",     real: true },
+  { src: "/images/gallery/01.png", alt: "Corte clássico com fade — A Casa Barbearia", real: true },
+  { src: "/images/gallery/02.png", alt: "Corte e barba degradada — A Casa Barbearia",  real: true },
+  { src: "/images/gallery/03.png", alt: "Fade alto com textura — A Casa Barbearia",     real: true },
   { src: "/images/gallery/04.jpg", alt: "Corte de cabelo — A Casa Barbearia",            real: false },
   { src: "/images/gallery/05.jpg", alt: "Corte de cabelo — A Casa Barbearia",            real: false },
   { src: "/images/gallery/06.jpg", alt: "Corte de cabelo — A Casa Barbearia",            real: false },
