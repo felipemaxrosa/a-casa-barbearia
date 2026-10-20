@@ -51,7 +51,8 @@ export function Footer() {
               Encontra-nos
             </h3>
             <address className="not-italic text-sm text-white/70 leading-relaxed">
-              <p>Coimbra, Portugal</p>
+              <p>Rua Feitoria dos Linhos, Nº 6</p>
+              <p>3040-252 Coimbra</p>
               <a
                 href="https://www.instagram.com/acasa_barbearia/"
                 target="_blank"
