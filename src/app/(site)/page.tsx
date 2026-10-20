@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Heading } from "@/components/ui";
-import { BarberPole } from "@/components/icons";
 import { Button } from "@/components/ui";
 import { HairSalonJsonLd } from "@/components/seo/JsonLd";
 
@@ -20,9 +20,16 @@ export default function HomePage() {
         className="section bg-[var(--color-green-900)] text-white relative overflow-hidden"
         aria-labelledby="hero-heading"
       >
-        {/* Fundo decorativo */}
-        <div className="absolute inset-0 opacity-5 pointer-events-none select-none flex items-center justify-center">
-          <BarberPole size={400} className="text-white" />
+        {/* Ilustração decorativa — ferramentas do barbeiro */}
+        <div className="absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none select-none hidden md:block">
+          <Image
+            src="/images/barber-tools.png"
+            alt=""
+            fill
+            className="object-contain object-center"
+            style={{ mixBlendMode: "luminosity", opacity: 0.12 }}
+            priority={false}
+          />
         </div>
 
         <div className="container-site relative z-10 flex flex-col items-start gap-6 max-w-2xl">

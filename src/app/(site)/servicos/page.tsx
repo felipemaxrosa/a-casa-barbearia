@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Heading, Badge } from "@/components/ui";
 import { Scissors, Razor, Comb } from "@/components/icons";
 
@@ -24,8 +25,12 @@ const categoryColor: Record<string, "default" | "green" | "brass"> = {
 
 export default function ServicosPage() {
   return (
-    <div className="section">
-      <div className="container-site">
+    <div className="section relative overflow-hidden">
+      {/* Decoração fundo */}
+      <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-96 h-96 pointer-events-none select-none hidden lg:block opacity-[0.04]">
+        <Image src="/images/barber-tools.png" alt="" fill className="object-contain" />
+      </div>
+      <div className="container-site relative z-10">
         <div className="mb-12">
           <span className="divider-brass" />
           <Heading as="h1" size={1}>Serviços</Heading>
@@ -62,5 +67,6 @@ export default function ServicosPage() {
         </p>
       </div>
     </div>
+
   );
 }
